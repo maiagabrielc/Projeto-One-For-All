@@ -1,8 +1,8 @@
 SELECT us.user_name AS usuario,
 IF(
 	DATEDIFF(DATE(MAX(pl.date_played)), CURRENT_DATE()) < -365,
-    'Usuário ativo',
-    'Usuário inativo'
+    'Usuário inativo',
+    'Usuário ativo'
 ) AS condicao_usuario
 FROM SpotifyClone.user AS us
 JOIN SpotifyClone.plays AS pl
